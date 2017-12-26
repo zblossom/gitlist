@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>transform 动画翻转</title>
+    <style>
+        ul li{
+            list-style-type: none;
+            width: 70px;
+            height: 70px;
+            background: greenyellow;
+            position: relative;
+            float: left;
+            border: 1px solid #000000;
+            text-align: center;
+        }
+        ul li a{
+            text-decoration: none;
+            color: #000000;
+            font-size: 16px;
+            font-weight: bolder;
+            padding-top:50px ;
+            display: block;
+            width: 70px;
+            height: 70px;
+            box-sizing: border-box;
+            transition: all 1s linear;
+        }
+        /*使用绝对定位，第一个a的top值定位是0px ;
+        第二个a的top值定位是-70px；当hover 的时候，直接沿着y轴位移70px */
+        ul li a:nth-child(1){
+            position: absolute;
+            top:0px;
+        }
+        ul li a:nth-child(2){
+            position: absolute;
+            top:-70px;
+        }
+        ul li:hover a{
+          transform:translateY(70px);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="">ak1k</a><a href="">ak1k</a></li>
+    <li><a href="">kak2</a><a href="">kak2</a></li>
+    <li><a href="">kak3</a><a href="">kak3</a></li>
+    <li><a href="">kak4</a><a href="">kak4</a></li>
+    <li><a href="">kak5</a><a href="">kak5</a></li>
+</ul>
+</body>
+</html>
